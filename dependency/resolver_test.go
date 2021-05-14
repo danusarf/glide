@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/Masterminds/glide/cfg"
+	"github.com/danusarf/glide/cfg"
 )
 
 func TestResolveLocalShallow(t *testing.T) {
@@ -24,7 +24,7 @@ func TestResolveLocalShallow(t *testing.T) {
 		filepath.FromSlash("github.com/Masterminds/semver"),
 		filepath.FromSlash("github.com/Masterminds/vcs"),
 		filepath.FromSlash("gopkg.in/yaml.v2"),
-		filepath.FromSlash("github.com/codegangsta/cli"),
+		filepath.FromSlash("github.com/urfave/cli"),
 	}
 
 	for _, p := range expect {
@@ -67,8 +67,8 @@ func TestResolve(t *testing.T) {
 	h := &DefaultMissingPackageHandler{Missing: []string{}, Gopath: []string{}, Prefix: "../vendor"}
 	r.Handler = h
 
-	base := filepath.Join(os.Getenv("GOPATH"), "src/github.com/Masterminds/glide/vendor")
-	l, err := r.Resolve("github.com/codegangsta/cli", base)
+	base := filepath.Join(os.Getenv("GOPATH"), "src/github.com/danusarf/glide/vendor")
+	l, err := r.Resolve("github.com/urfave/cli", base)
 	if err != nil {
 		t.Fatalf("Failed to resolve: %s", err)
 	}
@@ -77,7 +77,7 @@ func TestResolve(t *testing.T) {
 		t.Errorf("Expected 1 dep, got %d: %s", len(l), l[0])
 	}
 
-	if !strings.HasSuffix(filepath.FromSlash("github.com/codegangsta/cli"), l[0]) {
+	if !strings.HasSuffix(filepath.FromSlash("github.com/urfave/cli"), l[0]) {
 		t.Errorf("Unexpected package name: %s", l[0])
 	}
 }
@@ -85,7 +85,7 @@ func TestResolve(t *testing.T) {
 func TestResolveAll(t *testing.T) {
 	// These are build dependencies of Glide, so we know they are here.
 	deps := []*cfg.Dependency{
-		{Name: "github.com/codegangsta/cli"},
+		{Name: "github.com/urfave/cli"},
 		{Name: "github.com/Masterminds/semver"},
 		{Name: "github.com/Masterminds/vcs"},
 		{Name: "gopkg.in/yaml.v2"},

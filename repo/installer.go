@@ -11,16 +11,16 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/Masterminds/glide/cache"
-	"github.com/Masterminds/glide/cfg"
-	"github.com/Masterminds/glide/dependency"
-	"github.com/Masterminds/glide/importer"
-	"github.com/Masterminds/glide/msg"
-	gpath "github.com/Masterminds/glide/path"
-	"github.com/Masterminds/glide/util"
+	"github.com/danusarf/glide/cache"
+	"github.com/danusarf/glide/cfg"
+	"github.com/danusarf/glide/dependency"
+	"github.com/danusarf/glide/importer"
+	"github.com/danusarf/glide/msg"
+	gpath "github.com/danusarf/glide/path"
+	"github.com/danusarf/glide/util"
 	"github.com/Masterminds/semver"
 	"github.com/Masterminds/vcs"
-	"github.com/codegangsta/cli"
+	"github.com/urfave/cli"
 )
 
 // Installer provides facilities for installing the repos in a config file.

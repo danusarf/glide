@@ -4,8 +4,8 @@ import (
 	"io/ioutil"
 	"testing"
 
-	"github.com/Masterminds/glide/cfg"
-	"github.com/Masterminds/glide/msg"
+	"github.com/danusarf/glide/cfg"
+	"github.com/danusarf/glide/msg"
 )
 
 func TestAddPkgsToConfig(t *testing.T) {

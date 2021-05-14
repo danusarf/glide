@@ -5,7 +5,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/Masterminds/glide/msg"
+	"github.com/danusarf/glide/msg"
 )
 
 func TestName(t *testing.T) {

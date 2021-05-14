@@ -126,7 +126,7 @@ to be supporting builds for it at this time.
   `glide init` or as separate command
 - #438: Added ability to read symlink basedirs (thanks @klnusbaum)
 - #436: Added .idea to .gitignore
-- #393 and #401: Added a PPA (https://github.com/Masterminds/glide-ppa) and instructions
+- #393 and #401: Added a PPA (https://github.com/danusarf/glide-ppa) and instructions
   on using it (thanks @franciscocpg)
 - #390: Added support for custom Go executable name. Needed for environments like
   appengine. Environment variable GLIDE_GO_EXECUTABLE (thanks @dpmcnevin)
@@ -433,4 +433,4 @@ previous releases.**
   packages. (Thanks gsalgado)
 - Issue #11: Add GOBIN to glide environment (via dz0ny)
 - Typos fixed (#17 by lamielle, #16 by roblillack)
-- Moved the CLI handling to cli.go (github.com/codegangsta/cli)
+- Moved the CLI handling to cli.go (github.com/urfave/cli)
